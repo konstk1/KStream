@@ -12,6 +12,7 @@ import ScreenSaver
 class KStreamView : ScreenSaverView {
     
     var imageView: NSImageView!
+    var gplus = GooglePlus()
     
     convenience override init() {
         self.init(frame: CGRectZero, isPreview: false)
@@ -24,7 +25,7 @@ class KStreamView : ScreenSaverView {
         imageView = NSImageView(frame: frame)
         addSubview(imageView)
         
-        // feed: https://picasaweb.google.com/data/feed/api/user/104917095337339744256
+        
     }
     
     required init?(coder: NSCoder) {

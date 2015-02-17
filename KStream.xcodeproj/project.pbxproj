@@ -12,6 +12,8 @@
 		FFA255AE1A92B3D100600254 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA255AD1A92B3D100600254 /* Images.xcassets */; };
 		FFA255B11A92B3D100600254 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFA255AF1A92B3D100600254 /* MainMenu.xib */; };
 		FFA255C41A92B45200600254 /* KStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA255A11A92B36B00600254 /* KStreamView.swift */; };
+		FFA255C61A92DCB900600254 /* GooglePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA255C51A92DCB900600254 /* GooglePlus.swift */; };
+		FFA255C71A92DDA900600254 /* GooglePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA255C51A92DCB900600254 /* GooglePlus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,7 @@
 		FFA255AB1A92B3D100600254 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFA255AD1A92B3D100600254 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FFA255B01A92B3D100600254 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		FFA255C51A92DCB900600254 /* GooglePlus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +67,9 @@
 		FFA255951A92B34700600254 /* KStream */ = {
 			isa = PBXGroup;
 			children = (
-				FFA255961A92B34700600254 /* Supporting Files */,
+				FFA255C51A92DCB900600254 /* GooglePlus.swift */,
 				FFA255A11A92B36B00600254 /* KStreamView.swift */,
+				FFA255961A92B34700600254 /* Supporting Files */,
 			);
 			path = KStream;
 			sourceTree = "<group>";
@@ -205,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFA255C61A92DCB900600254 /* GooglePlus.swift in Sources */,
 				FFA255A21A92B36B00600254 /* KStreamView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFA255C41A92B45200600254 /* KStreamView.swift in Sources */,
+				FFA255C71A92DDA900600254 /* GooglePlus.swift in Sources */,
 				FFA255AC1A92B3D100600254 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +390,7 @@
 				FFA255A01A92B34700600254 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FFA255BE1A92B3D100600254 /* Build configuration list for PBXNativeTarget "KStreamDemo" */ = {
 			isa = XCConfigurationList;
@@ -392,6 +399,7 @@
 				FFA255C01A92B3D100600254 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
