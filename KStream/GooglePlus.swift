@@ -6,49 +6,58 @@
 //  Copyright (c) 2015 Kon. All rights reserved.
 //
 
-import Foundation
+import AppKit
 
-class GooglePlus : NSObject, NSXMLParserDelegate {
-    var tabs = 0
-    var entryFound = false
-    var albumIdFound = false
-    var numAlbums = 0
+let albumIdPath = "//entry//gphoto:id"
+let photoUrlPath = "//entry/content/@src"
+
+class GooglePlus {
+    private var numAlbums = 0
+    private var numPhotos = 0
     
-    override init() {
-        super.init()
-        var url = "https://picasaweb.google.com/data/feed/api/user/104917095337339744256"
-        if let parser = NSXMLParser(contentsOfURL: NSURL(string: url)) {
-            parser.delegate = self
-            parser.parse()
-        }
+    private var albums: [String]!
+    private var photoDict = [String : [String]]()
+    
+    let userId: String
+    
+    lazy var albumListUrl: String = "https://picasaweb.google.com/data/feed/api/user/\(self.userId)?imgmax=d"
+    
+    func albumUrl(albumId: String) -> String {
+        return "https://picasaweb.google.com/data/feed/api/user/\(userId)/albumid/\(albumId)"
     }
     
-    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
-//        print("\n")
-//        for _ in 0..<tabs {
-//            print("\t")
-//        }
-//        
-//        print("< \(elementName) - ")
-        tabs++
+    init?(userId: String) {
+        self.userId = userId
+        albums = idsForUrl(albumListUrl, xpath: albumIdPath)
+    }
+    
+    func photosInAlbum(albumId: String) -> [String] {
+        // TODO: get full size version (add /d/ before filename in url)
+        return idsForUrl(albumUrl(albumId), xpath: photoUrlPath)
+    }
+    
+    func randomPhoto() -> NSImage {
+        // TODO: better randomizer
+        var randomAlbum = albums.randomItem()
+        var photoUrls = photosInAlbum(randomAlbum)
         
-        if elementName == "entry" {
-            entryFound = true
-        } else if entryFound && elementName == "gphoto:id" {
-            albumIdFound = true
-        }
-    }
-    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        tabs--
+        var randomPhoto = photoUrls.randomItem()
+        
+        return NSImage(contentsOfURL: NSURL(string: randomPhoto)!)!
     }
     
-    func parser(parser: NSXMLParser, foundCharacters string: String?) {
-//        println(string!)
-        if albumIdFound {
-            println("\(numAlbums): \(string!)")
-            entryFound = false
-            albumIdFound = false
-            ++numAlbums
-        }
+// MARK: XML
+    func idsForUrl(url: String, xpath: String) -> [String]{
+        var xmlDoc = NSXMLDocument(contentsOfURL: NSURL(string: url)!, options: Int(NSXMLDocumentContentKind.XMLKind.rawValue), error: nil)
+        var nodes = xmlDoc?.nodesForXPath(xpath, error: nil) as! [NSXMLNode]
+        
+        return nodes.map { $0.objectValue! as! String }
+    }
+}
+
+extension Array {
+    func randomItem() -> T {
+        let index = Int(arc4random_uniform(UInt32(self.count)))
+        return self[index]
     }
 }
