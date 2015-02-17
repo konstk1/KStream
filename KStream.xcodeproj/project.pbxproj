@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FFA255A21A92B36B00600254 /* KStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA255A11A92B36B00600254 /* KStreamView.swift */; };
+		FFA255AC1A92B3D100600254 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA255AB1A92B3D100600254 /* AppDelegate.swift */; };
+		FFA255AE1A92B3D100600254 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA255AD1A92B3D100600254 /* Images.xcassets */; };
+		FFA255B11A92B3D100600254 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFA255AF1A92B3D100600254 /* MainMenu.xib */; };
+		FFA255C41A92B45200600254 /* KStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA255A11A92B36B00600254 /* KStreamView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FFA255931A92B34700600254 /* KStream.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KStream.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFA255971A92B34700600254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFA255A11A92B36B00600254 /* KStreamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KStreamView.swift; sourceTree = "<group>"; };
+		FFA255A71A92B3D100600254 /* KStreamDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KStreamDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFA255AA1A92B3D100600254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFA255AB1A92B3D100600254 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FFA255AD1A92B3D100600254 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FFA255B01A92B3D100600254 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFA2558F1A92B34700600254 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFA255A41A92B3D100600254 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FFA255891A92B34700600254 = {
+			isa = PBXGroup;
+			children = (
+				FFA255951A92B34700600254 /* KStream */,
+				FFA255A81A92B3D100600254 /* KStreamDemo */,
+				FFA255941A92B34700600254 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FFA255941A92B34700600254 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFA255931A92B34700600254 /* KStream.saver */,
+				FFA255A71A92B3D100600254 /* KStreamDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFA255951A92B34700600254 /* KStream */ = {
+			isa = PBXGroup;
+			children = (
+				FFA255961A92B34700600254 /* Supporting Files */,
+				FFA255A11A92B36B00600254 /* KStreamView.swift */,
+			);
+			path = KStream;
+			sourceTree = "<group>";
+		};
+		FFA255961A92B34700600254 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FFA255971A92B34700600254 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FFA255A81A92B3D100600254 /* KStreamDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FFA255AB1A92B3D100600254 /* AppDelegate.swift */,
+				FFA255AD1A92B3D100600254 /* Images.xcassets */,
+				FFA255AF1A92B3D100600254 /* MainMenu.xib */,
+				FFA255A91A92B3D100600254 /* Supporting Files */,
+			);
+			path = KStreamDemo;
+			sourceTree = "<group>";
+		};
+		FFA255A91A92B3D100600254 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FFA255AA1A92B3D100600254 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FFA255901A92B34700600254 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		FFA255921A92B34700600254 /* KStream */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFA2559E1A92B34700600254 /* Build configuration list for PBXNativeTarget "KStream" */;
+			buildPhases = (
+				FFA2558E1A92B34700600254 /* Sources */,
+				FFA2558F1A92B34700600254 /* Frameworks */,
+				FFA255901A92B34700600254 /* Headers */,
+				FFA255911A92B34700600254 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KStream;
+			productName = KStream;
+			productReference = FFA255931A92B34700600254 /* KStream.saver */;
+			productType = "com.apple.product-type.bundle";
+		};
+		FFA255A61A92B3D100600254 /* KStreamDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFA255BE1A92B3D100600254 /* Build configuration list for PBXNativeTarget "KStreamDemo" */;
+			buildPhases = (
+				FFA255A31A92B3D100600254 /* Sources */,
+				FFA255A41A92B3D100600254 /* Frameworks */,
+				FFA255A51A92B3D100600254 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KStreamDemo;
+			productName = KStreamDemo;
+			productReference = FFA255A71A92B3D100600254 /* KStreamDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFA2558A1A92B34700600254 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Kon;
+				TargetAttributes = {
+					FFA255921A92B34700600254 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					FFA255A61A92B3D100600254 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+				};
+			};
+			buildConfigurationList = FFA2558D1A92B34700600254 /* Build configuration list for PBXProject "KStream" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FFA255891A92B34700600254;
+			productRefGroup = FFA255941A92B34700600254 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFA255921A92B34700600254 /* KStream */,
+				FFA255A61A92B3D100600254 /* KStreamDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFA255911A92B34700600254 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFA255A51A92B3D100600254 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFA255AE1A92B3D100600254 /* Images.xcassets in Resources */,
+				FFA255B11A92B3D100600254 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFA2558E1A92B34700600254 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFA255A21A92B36B00600254 /* KStreamView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFA255A31A92B3D100600254 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFA255C41A92B45200600254 /* KStreamView.swift in Sources */,
+				FFA255AC1A92B3D100600254 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FFA255AF1A92B3D100600254 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFA255B01A92B3D100600254 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FFA2559C1A92B34700600254 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FFA2559D1A92B34700600254 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FFA2559F1A92B34700600254 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = KStream/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Debug;
+		};
+		FFA255A01A92B34700600254 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = KStream/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+		FFA255BF1A92B3D100600254 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KStreamDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FFA255C01A92B3D100600254 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = KStreamDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFA2558D1A92B34700600254 /* Build configuration list for PBXProject "KStream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFA2559C1A92B34700600254 /* Debug */,
+				FFA2559D1A92B34700600254 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFA2559E1A92B34700600254 /* Build configuration list for PBXNativeTarget "KStream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFA2559F1A92B34700600254 /* Debug */,
+				FFA255A01A92B34700600254 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FFA255BE1A92B3D100600254 /* Build configuration list for PBXNativeTarget "KStreamDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFA255BF1A92B3D100600254 /* Debug */,
+				FFA255C01A92B3D100600254 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FFA2558A1A92B34700600254 /* Project object */;
+}
