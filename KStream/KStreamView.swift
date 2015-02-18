@@ -10,9 +10,8 @@ import AppKit
 import ScreenSaver
 
 class KStreamView : ScreenSaverView {
-    
     var imageView: NSImageView!
-    var gplus = GooglePlus(userId: "104917095337339744256")!
+    private var gplus = GooglePlus(userId: "104917095337339744256")!
     
     convenience override init() {
         self.init(frame: CGRectZero, isPreview: false)
@@ -20,11 +19,18 @@ class KStreamView : ScreenSaverView {
     
     override init!(frame: NSRect, isPreview: Bool) {
         super.init(frame: frame, isPreview: isPreview)
-        self.setAnimationTimeInterval(2.0)
+        self.setAnimationTimeInterval(5.0)
+        
+        wantsLayer = true;
+        layer?.backgroundColor = NSColor.blackColor().CGColor
         
         imageView = NSImageView(frame: frame)
-        addSubview(imageView)      
+        imageView.imageScaling = NSImageScaling.ImageScaleProportionallyUpOrDown
+        addSubview(imageView)
+
+        println("KK - Starting KStream! frame: \(frame), preview \(isPreview)")
     }
+    
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -44,8 +50,11 @@ class KStreamView : ScreenSaverView {
     
     
     override func animateOneFrame() {
-        imageView.frame.size = frame.size
-        imageView.image = gplus.randomPhoto()
+        if !isPreview() {
+            imageView.frame.origin = frame.origin
+            imageView.frame.size = frame.size
+            imageView.image = gplus.randomPhoto()
+        }
     }
     
     override func hasConfigureSheet() -> Bool {

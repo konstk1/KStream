@@ -23,6 +23,6 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2015 Kon. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
-	<string>KStreamView</string>
+	<string>KStream.KStreamView</string>
 </dict>
 </plist>

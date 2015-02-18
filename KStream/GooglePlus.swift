@@ -10,6 +10,7 @@ import AppKit
 
 let albumIdPath = "//entry//gphoto:id"
 let photoUrlPath = "//entry/content/@src"
+let maxImageSize = "d"      // actual file (other options sXXXX)
 
 class GooglePlus {
     private var numAlbums = 0
@@ -33,7 +34,9 @@ class GooglePlus {
     
     func photosInAlbum(albumId: String) -> [String] {
         // TODO: get full size version (add /d/ before filename in url)
-        return idsForUrl(albumUrl(albumId), xpath: photoUrlPath)
+        var photoPaths = idsForUrl(albumUrl(albumId), xpath: photoUrlPath)
+        
+        return photoPaths
     }
     
     func randomPhoto() -> NSImage {
@@ -41,9 +44,14 @@ class GooglePlus {
         var randomAlbum = albums.randomItem()
         var photoUrls = photosInAlbum(randomAlbum)
         
-        var randomPhoto = photoUrls.randomItem()
+        var randomPhotoUrl = photoUrls.randomItem()
         
-        return NSImage(contentsOfURL: NSURL(string: randomPhoto)!)!
+        var fileName = randomPhotoUrl.lastPathComponent
+        randomPhotoUrl.replaceRange(randomPhotoUrl.rangeOfString(fileName, options: NSStringCompareOptions.allZeros, range: nil, locale: nil)!, with: "\(maxImageSize)/\(fileName)")
+        
+        println("Path: \(randomPhotoUrl)")
+        
+        return NSImage(contentsOfURL: NSURL(string: randomPhotoUrl)!)!
     }
     
 // MARK: XML
