@@ -8,9 +8,9 @@
 
 import AppKit
 
-let albumIdPath = "//entry//gphoto:id"
+let albumInfoPath = "/feed/entry/gphoto:id | /feed/entry/gphoto:numphotos"
 let photoUrlPath = "//entry/content/@src"
-let maxImageSize = "d"      // actual file (other options sXXXX)
+let maxImageSize = "d"      // actual file (d) (other options sXXXX)
 
 class GooglePlus {
     private var numAlbums = 0
@@ -21,21 +21,22 @@ class GooglePlus {
     
     let userId: String
     
-    lazy var albumListUrl: String = "https://picasaweb.google.com/data/feed/api/user/\(self.userId)?imgmax=d"
+    lazy var albumListUrl: String = "https://picasaweb.google.com/data/feed/api/user/\(self.userId)"
     
     func albumUrl(albumId: String) -> String {
-        return "https://picasaweb.google.com/data/feed/api/user/\(userId)/albumid/\(albumId)"
+        return "https://picasaweb.google.com/data/feed/api/user/\(userId)/albumid/\(albumId)?imgmax=\(maxImageSize)"
     }
     
     init?(userId: String) {
         self.userId = userId
-        albums = idsForUrl(albumListUrl, xpath: albumIdPath)
+        albums = idsForUrl(albumListUrl, xpath: albumInfoPath)
+        // TODO: parse album IDs and photo counts (to be used for random)
+        pragma
+        print(albums)
     }
     
     func photosInAlbum(albumId: String) -> [String] {
-        // TODO: get full size version (add /d/ before filename in url)
         var photoPaths = idsForUrl(albumUrl(albumId), xpath: photoUrlPath)
-        
         return photoPaths
     }
     
@@ -45,11 +46,8 @@ class GooglePlus {
         var photoUrls = photosInAlbum(randomAlbum)
         
         var randomPhotoUrl = photoUrls.randomItem()
-        
-        var fileName = randomPhotoUrl.lastPathComponent
-        randomPhotoUrl.replaceRange(randomPhotoUrl.rangeOfString(fileName, options: NSStringCompareOptions.allZeros, range: nil, locale: nil)!, with: "\(maxImageSize)/\(fileName)")
-        
-        println("Path: \(randomPhotoUrl)")
+                
+//        println("Path: \(randomPhotoUrl)")
         
         return NSImage(contentsOfURL: NSURL(string: randomPhotoUrl)!)!
     }
