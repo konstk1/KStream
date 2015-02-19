@@ -28,7 +28,7 @@ class KStreamView : ScreenSaverView {
         imageView.imageScaling = NSImageScaling.ImageScaleProportionallyUpOrDown
         addSubview(imageView)
 
-        println("KK - Starting KStream! frame: \(frame), preview \(isPreview)")
+        println("KK - Starting KStream! frame: \(frame), preview: \(isPreview)")
     }
     
     
